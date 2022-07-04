@@ -1,0 +1,104 @@
+.button{
+    padding: 19px 32px;
+    border-radius: 32px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    &-primary{
+        background: $primary;
+        border:2px solid $primary;
+        color: $white;
+        &:hover{
+            background: transparent;
+            border: 2px solid $primary;
+            color: $primary;
+        }
+
+        &-icon{
+            &:hover{
+                &::before{
+                    background-image: url(../btn-icon/icon-green-hover.svg);
+                }           
+            }
+
+            &::before{
+                content: "";
+                background-image: url(../btn-icon/icon-green.svg);
+                background-size: cover;
+                width: 24px;
+                height: 24px;
+            }   
+        }
+    }
+
+    &-secondary{
+        background: $form;
+        border: 2px solid $form;
+
+        &:hover{
+            background: transparent;
+            border: 2px solid $form;
+        }
+        
+        &-icon{
+            
+            &::before{
+                content: "";
+                background-image: url(../btn-icon/icon-grey.svg);
+                background-size: cover;
+                width: 24px;
+                height: 24px;
+            }   
+        }
+    }
+
+    &-warning{
+        background: $secondary;
+        border: 2px solid $secondary;
+        color: $white;
+
+        &:hover{
+            background: transparent;
+            border: 2px solid $secondary;
+            color: $secondary;
+        }
+
+        
+        &-icon{
+            &:hover{
+                &::before{
+                    background-image: url(../btn-icon/icon-red-hover.svg);
+                }           
+            }
+
+            &::before{
+                content: "";
+                background-image: url(../btn-icon/icon-green.svg);
+                background-size: cover;
+                width: 24px;
+                height: 24px;
+            }   
+        }
+    }
+
+    &-disable{
+        background: $form;
+        border: 2px solid $form;
+        color: $secondary-text;
+        
+        &-icon{
+            &::before{
+                content: "";
+                background-image: url(../btn-icon/icon-disable.svg);
+                background-size: cover;
+                width: 24px;
+                height: 24px;
+            }   
+        }
+    }
+}
