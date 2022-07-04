@@ -21,30 +21,30 @@
         text-align: center;
         letter-spacing: 0.007em;
         
-    
-        &-active{
-            color: $tab-active !important;
-            text-decoration: none;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-
-            &::after{
-                margin-top: 16px;
-                margin-bottom: -3px;
-                z-index: 1;
-                content: "";
-                width: 100%;
-                height: 3px;
-                background: $primary;
-            }
-        }
-    
-        &-default{
+        &__link{
             text-decoration: none;
             color: $secondary-text;
             width: 50%;
             padding-bottom: 16px;
-        }
+    
+            &-active{
+                color: $tab-active !important;
+                text-decoration: none;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+
+                &::after{
+                    margin-top: 16px;
+                    margin-bottom: -3px;
+                    z-index: 1;
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background: $primary;
+                }
+            }
+        }   
+    
     }
 }
