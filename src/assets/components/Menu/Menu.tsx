@@ -1,38 +1,53 @@
 import React from 'react'
 import { BrowserRouter,Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
 
+//ROUTE && BUTTON
 import MenuButton from './MenuButton'
 import Home from '../../pages/Home'
 import Notifications from '../../pages/Notifications'
 import Upload from '../../pages/Upload'
 import Profile from '../../pages/Profile'
 
+//BASE ICON
 import HomeIcon from '/menu-icon/home.svg'
 import UploadIcon from '/menu-icon/Upload.svg'
 import NotificationIcon from '/menu-icon/Notification.svg'
 import ProfileIcon from '/menu-icon/Profile.svg'
 
-function Menu() {
+//ACTIVE ICON
+import ActiveHomeIcon from '/menu-icon/home-active.svg'
+import ActiveUploadIcon from '/menu-icon/Upload-active.svg'
+import ActiveNotificationIcon from '/menu-icon/Notification-active.svg'
+import ActiveProfileIcon from '/menu-icon/Profile-active.svg'
+
+
+export default function Menu() {
+
   return (
     <BrowserRouter>
     <nav className="menu-container">
         <MenuButton
-        icon_menu={HomeIcon}
+        imgGrey={HomeIcon}
+        imgActive = {ActiveHomeIcon}
         menu_title="Home"
         page_link="/"
         />
         <MenuButton 
-        icon_menu={UploadIcon}
+        imgGrey={UploadIcon}
+        imgActive={ActiveUploadIcon}
         menu_title="Upload"
         page_link="/upload"
         />
         <MenuButton
-        icon_menu={NotificationIcon}
+        imgGrey={NotificationIcon}
+        imgActive={ActiveNotificationIcon}
         menu_title="Notification"
         page_link="/notification"
         />
         <MenuButton 
-        icon_menu={ProfileIcon}
+        imgGrey={ProfileIcon}
+        imgActive={ActiveProfileIcon}
         menu_title="Profile"
         page_link="/profile"
         />
@@ -48,5 +63,3 @@ function Menu() {
     </BrowserRouter>
   )
 }
-
-export default Menu
