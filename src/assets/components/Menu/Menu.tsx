@@ -20,6 +20,7 @@ import ActiveHomeIcon from '/menu-icon/home-active.svg'
 import ActiveUploadIcon from '/menu-icon/Upload-active.svg'
 import ActiveNotificationIcon from '/menu-icon/Notification-active.svg'
 import ActiveProfileIcon from '/menu-icon/Profile-active.svg'
+import { SignInPage } from '../../pages/SignInPage'
 
 
 export default function Menu() {
@@ -58,6 +59,8 @@ export default function Menu() {
         <Route path="/upload" element={<Upload />}></Route>
         <Route path="/notification" element={<Notifications />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/connexion" element={<SignInPage />}></Route>
+        
     </Routes>
 
     </BrowserRouter>
